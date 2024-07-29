@@ -13,7 +13,16 @@
 
 const array = [1, 2, 3, 4, 5];
 let sum = 0;
-for (let index = 0; index < array.length; index++) {
-  sum += array[index];
-}
+// 1 vr
+// for (let index = 0; index < array.length; index++) {
+//   sum += array[index];
+// }
+// 2 vr
+// array.forEach((value) => {
+//   sum += value;
+// });
+// 3 vr
+sum = array.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue;
+}, 0);
 console.log(sum);
