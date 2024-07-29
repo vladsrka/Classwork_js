@@ -10,3 +10,6 @@ console.log(leninSt);
 
 leninSt.push("home 11");
 console.log(leninSt);
+
+leninSt.pop();
+console.log(leninSt);
