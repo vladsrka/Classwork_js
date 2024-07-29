@@ -16,15 +16,18 @@
 
     <script>
         "use strict";
-        const base = 6;
-        if (base < 2) {
-            console.log("less than 2");
-        } else if (base < 3) {
-            console.log("less than 3");
-        } else if (base < 4) {
-            console.log("less than 4");
-        } else {
-            console.log("biggest");
+        const base = 10;
+        switch (base) {
+            case 6:
+                console.log(6);
+                break;
+            case 7:
+                console.log(7);
+                break;
+            case 10:
+            case 11:
+            default:
+                console.log("not matched");
         }
     </script>
 
