@@ -15,9 +15,9 @@ const library = [
         title: "Work",
     },
     {
-        author: "Andrey",
-        year: 1950,
-        title: "Hi",
+        author: "Tanya",
+        year: 1992,
+        title: "Work2",
     },
     {
         author: "Vika",
@@ -31,13 +31,21 @@ const library = [
     },
 ]
 
+// 
 const getBookTitle = (title) => {
     return library.find((book) => book.title.includes(title));
 };
 
 console.log(getBookTitle("Work"))
 
+// 
+const getBooksTitle = (title) => {
+    return library.filter((book) => book.title.includes(title));
+};
 
+console.log(getBooksTitle("Work"))
+
+// 
 const getBookAutor = (author) => {
     return library.find((book) => book.author.includes(author));
 };
