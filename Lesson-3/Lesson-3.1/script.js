@@ -36,23 +36,35 @@ const getBookTitle = (title) => {
     return library.find((book) => book.title.includes(title));
 };
 
-console.log(getBookTitle("Work"))
+console.log(getBookTitle("Work"));
 
 // 
 const getBooksTitle = (title) => {
     return library.filter((book) => book.title.includes(title));
 };
 
-console.log(getBooksTitle("Work"))
+console.log(getBooksTitle("Work"));
 
 // 
 const getBookAutor = (author) => {
     return library.find((book) => book.author.includes(author));
 };
 
-console.log(getBookAutor("Vika"))
+console.log(getBookAutor("Vika"));
 
 
+// 
+const removeBookByTitle = (title) => {
+    const index = library.findIndex((book) => book.title === title);
+
+    if (index !== -1) {
+        library.splice(index, 1);
+    }
+
+    return library;
+};
+
+console.log(removeBookByTitle("Work"));
 // getBookTitle("");
 // getBookAutor("");
 
