@@ -67,7 +67,18 @@ const removeBookByTitle = (title) => {
 console.log(removeBookByTitle("Work"));
 // getBookTitle("");
 // getBookAutor("");
-
 // removeBookByTitle("");
 // removeBookByAutor("");
+
+const editBookByTitle = (title, newOption) => {
+    const index = library.findIndex((book) => book.title === title);
+
+    if (index !== -1) {
+        library[index] = { ...library[index], ...newOption };
+    }
+
+    return library;
+}
+
+console.log(editBookByTitle("Work2", { year: 2005, title: "test" }))
 
